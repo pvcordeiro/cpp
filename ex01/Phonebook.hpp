@@ -3,8 +3,13 @@
 
 #include "main.hpp"
 
-class Phonebook {
+class PhoneBook {
 
+	public:
+
+		Contact contact_list[8];
+		PhoneBook();
+		~PhoneBook();
 };
 
 #endif
