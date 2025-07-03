@@ -1,0 +1,6 @@
+*.o
+.vscode
+**/**/obj/*
+PhoneBook
+megaphone
+Account
