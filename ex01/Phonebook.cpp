@@ -91,16 +91,18 @@ bool	Phonebook::Search()
 	}
 	std::cout << std::endl;
 
-	if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
-	{
-		index = input[0] - '0';
-		if (index < contact_count)
-			contact_list[index].showContactInfo();
+	do {
+		if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
+		{
+			index = input[0] - '0';
+			if (index < contact_count)
+				contact_list[index].showContactInfo();
+			else
+				std::cout << "\nInvalid selection." << std::endl;
+		}
 		else
-			std::cout << "\nInvalid selection." << std::endl;
-	}
-	else
-		std::cout << "\nInvalid input." << std::endl;
+			std::cout << "\nInvalid input." << std::endl;
+	} while (input.length() == 1 && input[0] >= '0' && input[0] <= '7');
 	
 	return (true);
 }
