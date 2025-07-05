@@ -1,6 +1,6 @@
 *.o
 .vscode
 **/**/obj/*
-PhoneBook
+Phonebook
 megaphone
 Account

@@ -1,15 +1,19 @@
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef Phonebook_HPP
+# define Phonebook_HPP
 
-#include "main.hpp"
+#include "Contact.hpp"
 
-class PhoneBook {
+class Phonebook
+{
+
+	private:
+		Contact contact_list[8];
+		int		contact_count;
 
 	public:
-
-		Contact contact_list[8];
-		PhoneBook();
-		~PhoneBook();
+		Phonebook();
+		bool	Add();
+		bool	Search();
 };
 
 #endif
