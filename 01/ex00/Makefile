@@ -1,5 +1,5 @@
-NAME	= Account
-SRC		= Account.cpp tests.cpp
+NAME	= braiiiiiinnnnzzzz
+SRC		= main.cpp Zombie.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
@@ -21,8 +21,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-run: all
-	./$(NAME)
 
 .PHONY: all clean fclean re

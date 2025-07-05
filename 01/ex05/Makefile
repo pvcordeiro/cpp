@@ -1,5 +1,5 @@
-NAME	= megaphone
-SRC		= megaphone.cpp
+NAME	= harl_2.0
+SRC		= main.cpp Harl.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
@@ -21,8 +21,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-
-run: all
-	./$(NAME)
 
 .PHONY: all clean fclean re
