@@ -84,25 +84,23 @@ bool	Phonebook::Search()
 		std::cout << std::setw(10) << truncate(contact_list[i].getter(_NickName)) << std::endl;
 	}
 
-	std::cout << "\nSelect contact: ";
-	if (!std::getline(std::cin, input) || std::cin.eof()) {
-		std::cout << "\nInput cancelled." << std::endl;
-		return (false);
-	}
-	std::cout << std::endl;
-
 	do {
+		std::cout << "\nSelect contact: ";
+		if (!std::getline(std::cin, input) || std::cin.eof())
+			return (std::cout << "\nInput cancelled." << std::endl, false);
+		if (input.empty())
+			return (true);
 		if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
 		{
 			index = input[0] - '0';
 			if (index < contact_count)
-				contact_list[index].showContactInfo();
+				return (contact_list[index].showContactInfo(), true);
 			else
 				std::cout << "\nInvalid selection." << std::endl;
 		}
 		else
 			std::cout << "\nInvalid input." << std::endl;
-	} while (input.length() == 1 && input[0] >= '0' && input[0] <= '7');
+	} while (true);
 	
 	return (true);
 }
