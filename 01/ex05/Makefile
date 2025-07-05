@@ -1,4 +1,4 @@
-NAME	= harl_2.0
+NAME	= harl
 SRC		= main.cpp Harl.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
