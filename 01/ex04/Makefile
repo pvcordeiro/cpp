@@ -1,4 +1,4 @@
-NAME	= sed_is_for_losers
+NAME	= sed
 SRC		= main.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
