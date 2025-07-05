@@ -24,14 +24,14 @@ bool	inputHandler(std::string prompt, std::string baseCase, t_get type, Contact&
 	do {
 		std::cout << prompt;
 		if (!std::getline(std::cin, input) || std::cin.eof())
-			return (std::cout << "\nInput cancelled." << std::endl, false);
+			return (false);
 		if (input.empty())
 			std::cout << baseCase << std::endl;
 		else if (type == _PhoneNumber && !checkNumber(input))
 			std::cout << "\nPhone number can only contain digits!" << std::endl;
-	} while (input.empty() || (type == _PhoneNumber && !checkNumber(input)));
-	new_contact.setter(input, type);
-	return (true);
+		else
+			return (new_contact.setter(input, type), true);
+	} while (true);
 }
 
 bool	Phonebook::Add()
@@ -87,8 +87,8 @@ bool	Phonebook::Search()
 	do {
 		std::cout << "\nSelect contact: ";
 		if (!std::getline(std::cin, input) || std::cin.eof())
-			return (std::cout << "\nInput cancelled." << std::endl, false);
-		if (input.empty())
+			return (false);
+		if (input.length() == 1 && input[0] == '8')
 			return (true);
 		if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
 		{
@@ -99,7 +99,7 @@ bool	Phonebook::Search()
 				std::cout << "\nInvalid selection." << std::endl;
 		}
 		else
-			std::cout << "\nInvalid input." << std::endl;
+			std::cout << "\nSelect a contact (or 8 to go back to main menu)" << std::endl;
 	} while (true);
 	
 	return (true);
