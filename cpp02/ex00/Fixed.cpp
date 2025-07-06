@@ -5,9 +5,10 @@ Fixed::Fixed(void) : rawBits(0)
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copyFrom) : rawBits(copyFrom.getRawBits())
+Fixed::Fixed(const Fixed &copyFrom)
 {
 	std::cout << "Copy constructor called" << std::endl;
+	*this = copyFrom;
 }
 
 Fixed& Fixed::operator=(const Fixed &right)

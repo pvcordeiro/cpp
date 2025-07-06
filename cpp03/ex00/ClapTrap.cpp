@@ -15,10 +15,12 @@ ClapTrap::ClapTrap(const ClapTrap &right)
 ClapTrap& ClapTrap::operator=(const ClapTrap &right)
 {
 	if (this != &right)
+	{
 		name = right.name;
 		hitPoints = right.hitPoints;
 		energyPoints = right.energyPoints;
 		attackDamage = right.attackDamage;
+	}
 	return (*this);
 }
 
