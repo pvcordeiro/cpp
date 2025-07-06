@@ -13,8 +13,8 @@ class Fixed
 		Fixed(void);
 		Fixed(const int value);
 		Fixed(const float value);
-		Fixed(const Fixed &copyFrom);
-		Fixed& operator=(const Fixed &copyFrom);
+		Fixed(const Fixed &right);
+		Fixed& operator=(const Fixed &right);
 		~Fixed(void);
 
 		int		getRawBits(void) const;
