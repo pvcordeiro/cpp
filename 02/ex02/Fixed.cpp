@@ -6,10 +6,7 @@ Fixed::Fixed(const int value) : rawBits(value << bits) {}
 
 Fixed::Fixed(const float value) : rawBits(roundf(value * (1 << bits))) {}
 
-Fixed::Fixed(const Fixed &right)
-{
-	*this = right;
-}
+Fixed::Fixed(const Fixed &right) : rawBits(right.rawBits) {}
 
 Fixed& Fixed::operator=(const Fixed &right)
 {
@@ -76,22 +73,22 @@ bool 	Fixed::operator!=(const Fixed &right) const
 
 Fixed Fixed::operator+(const Fixed &right) const
 {
-	return (Fixed(this->toFloat() + right.toFloat()));
+	return (Fixed(toFloat() + right.toFloat()));
 }
 
 Fixed Fixed::operator-(const Fixed &right) const
 {
-	return (Fixed(this->toFloat() - right.toFloat()));
+	return (Fixed(toFloat() - right.toFloat()));
 }
 
 Fixed Fixed::operator*(const Fixed &right) const
 {
-	return (Fixed(this->toFloat() * right.toFloat()));
+	return (Fixed(toFloat() * right.toFloat()));
 }
 
 Fixed Fixed::operator/(const Fixed &right) const
 {
-	return (Fixed(this->toFloat() / right.toFloat()));
+	return (Fixed(toFloat() / right.toFloat()));
 }
 
 Fixed Fixed::operator++(void)
