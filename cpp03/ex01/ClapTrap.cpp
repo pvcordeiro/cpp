@@ -3,37 +3,39 @@
 ClapTrap::ClapTrap(std::string name)
 	: name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "Constructing transformer" << std::endl;
+	std::cout << "Claptrap " << name << " constructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &right)
-	: name(right.name), hitPoints(right.hitPoints), energyPoints(right.energyPoints), attackDamage(right.attackDamage)
+ClapTrap::ClapTrap(const ClapTrap &copyFrom)
+	: name(copyFrom.name), hitPoints(copyFrom.hitPoints), energyPoints(copyFrom.energyPoints), attackDamage(copyFrom.attackDamage)
 {
-	std::cout << "Cloning transformer" << std::endl;
+	std::cout << "ClapTrap " << name << " copied" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &right)
 {
 	if (this != &right)
+	{
 		name = right.name;
 		hitPoints = right.hitPoints;
 		energyPoints = right.energyPoints;
 		attackDamage = right.attackDamage;
+	}
 	return (*this);
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destroying transformer" << std::endl;
+	std::cout << "ClapTrap " << name << " destroyed" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
 {
 	if (!energyPoints)
-		return (std::cout << name << " is too weak to attack" << std::endl, (void)0);
+		return (std::cout << "ClapTrap " << name << " is too weak to attack" << std::endl, (void)0);
 	if (!hitPoints)
-		return (std::cout << name << " is dead " << std::endl, (void)0);
-	std::cout << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
+		return (std::cout << "ClapTrap " << name << " is dead " << std::endl, (void)0);
+	std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
 	--energyPoints;
 }
 

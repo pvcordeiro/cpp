@@ -6,8 +6,8 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "Constructing transformer" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &right)
-	: name(right.name), hitPoints(right.hitPoints), energyPoints(right.energyPoints), attackDamage(right.attackDamage)
+ClapTrap::ClapTrap(const ClapTrap &copyFrom)
+	: name(copyFrom.name), hitPoints(copyFrom.hitPoints), energyPoints(copyFrom.energyPoints), attackDamage(copyFrom.attackDamage)
 {
 	std::cout << "Cloning transformer" << std::endl;
 }
