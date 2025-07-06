@@ -6,7 +6,7 @@
 class Fixed
 {
 	private:
-		int					raw;
+		int					rawBits;
 		static const int	bits = 8;
 	public:
 		Fixed(void);
