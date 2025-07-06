@@ -3,7 +3,7 @@ SRC		= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
 
 all: $(NAME)
 
