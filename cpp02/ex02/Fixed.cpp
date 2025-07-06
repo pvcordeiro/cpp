@@ -6,7 +6,7 @@ Fixed::Fixed(const int value) : rawBits(value << bits) {}
 
 Fixed::Fixed(const float value) : rawBits(roundf(value * (1 << bits))) {}
 
-Fixed::Fixed(const Fixed &right) : rawBits(right.rawBits) {}
+Fixed::Fixed(const Fixed &copyFrom) : rawBits(copyFrom.rawBits) {}
 
 Fixed& Fixed::operator=(const Fixed &right)
 {

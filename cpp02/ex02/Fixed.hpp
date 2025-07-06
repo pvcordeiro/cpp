@@ -13,7 +13,7 @@ class Fixed
 		Fixed(void);
 		Fixed(const int value);
 		Fixed(const float value);
-		Fixed(const Fixed &right);
+		Fixed(const Fixed &copyFrom);
 		Fixed& operator=(const Fixed &right);
 		~Fixed(void);
 

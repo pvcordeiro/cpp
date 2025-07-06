@@ -15,10 +15,10 @@ Fixed::Fixed(const float value) : rawBits(roundf(value * (1 << bits)))
 	std::cout << "Float constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &right)
+Fixed::Fixed(const Fixed &copyFrom)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = right;
+	*this = copyFrom;
 }
 
 Fixed& Fixed::operator=(const Fixed &right)
