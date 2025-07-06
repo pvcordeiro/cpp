@@ -42,16 +42,20 @@ int	main(void)
     megatron.guardGate();
     starscream.guardGate();
     
-    // Energy comparison test
-    std::cout << "\n--- Energy Comparison Test ---" << std::endl;
-    std::cout << "FragTrap has more energy (100) than ScavTrap (50)" << std::endl;
-    for (int i = 0; i < 10; i++) {
-        optimus.attack("Training dummy");
-        megatron.attack("Training dummy");
-    }
+    // Energy depletion test - Use up ALL remaining energy
+	std::cout << "\n--- Energy Depletion Test ---" << std::endl;
+	std::cout << "Depleting FragTrap energy (98 remaining)..." << std::endl;
+	for (int i = 0; i < 48; i++) {
+		optimus.attack("Training dummy");
+	}
+
+	std::cout << "\nDepleting ScavTrap energy (48 remaining)..." << std::endl;
+	for (int i = 0; i < 48; i++) {
+		megatron.attack("Training dummy");
+	}
     
     // FragTrap should still have energy, ScavTrap should be depleted
-    std::cout << "\n--- After 10 attacks each ---" << std::endl;
+    std::cout << "\n--- After 48 attacks each ---" << std::endl;
     optimus.attack("Still has energy");
     megatron.attack("Should be depleted");
     

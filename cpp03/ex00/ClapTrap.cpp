@@ -31,9 +31,9 @@ ClapTrap::~ClapTrap(void)
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (!energyPoints)
+	if (energyPoints <= 0)
 		return (std::cout << name << " is too weak to attack" << std::endl, (void)0);
-	if (!hitPoints)
+	if (hitPoints <= 0)
 		return (std::cout << name << " is dead " << std::endl, (void)0);
 	std::cout << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
 	--energyPoints;

@@ -27,9 +27,9 @@ FragTrap::~FragTrap(void)
 
 void FragTrap::attack(const std::string& target)
 {
-	if (!energyPoints)
+	if (energyPoints <= 0)
 		return (std::cout << "FragTrap " << name << " is too weak to attack" << std::endl, (void)0);
-	if (!hitPoints)
+	if (hitPoints <= 0)
 		return (std::cout << "FragTrap " << name << " is dead " << std::endl, (void)0);
 	std::cout << "FragTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
 	--energyPoints;
