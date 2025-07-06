@@ -1,5 +1,5 @@
-NAME	= scavTrap
-SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp
+NAME	= fragTrap
+SRC		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
