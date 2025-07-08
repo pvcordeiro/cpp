@@ -2,7 +2,19 @@
 
 This repository contains my journey through C++ programming, exploring fundamental concepts through practical exercises. Each module focuses on specific C++ features and programming paradigms.
 
-## 📚 Module Overview
+## � Table of Contents
+
+- [CPP00 - Namespaces, Classes, Member Functions](#cpp00---namespaces-classes-member-functions-stdio-streams-initialization-lists-static-const)
+- [CPP01 - Memory Allocation, Pointers, References](#cpp01---memory-allocation-pointers-to-members-references-switch-statement)
+- [CPP02 - Operator Overloading, Canonical Form](#cpp02---ad-hoc-polymorphism-operator-overloading-orthodox-canonical-class-form)
+- [CPP03 - Inheritance](#cpp03---inheritance)
+- [CPP04 - Polymorphism, Abstract Classes](#cpp04---subtype-polymorphism-abstract-classes-interfaces)
+- [Building and Running](#️-building-and-running)
+- [Key Learning Outcomes](#-key-learning-outcomes)
+- [Code Quality Standards](#-code-quality-standards)
+- [Skills Developed](#-skills-developed)
+
+## �📚 Module Overview
 
 ### CPP00 - Namespaces, Classes, Member Functions, stdio streams, Initialization lists, Static, Const
 
@@ -69,7 +81,22 @@ This repository contains my journey through C++ programming, exploring fundament
 - **ex00 - Aaaaand... OPEN!**: Basic class design with encapsulation
 - **ex01 - Serena, my Love!**: Single inheritance and method overriding
 - **ex02 - Repetitive Work**: Multiple inheritance and method resolution
-- **ex03 - Now It's Weird!**: Diamond inheritance and virtual inheritance
+
+---
+
+### CPP04 - Subtype Polymorphism, Abstract Classes, Interfaces
+
+**Key Concepts Learned:**
+- Virtual functions and polymorphism
+- Abstract classes and pure virtual functions
+- Deep copy vs shallow copy
+- Virtual destructors and proper cleanup
+- Dynamic memory management with inheritance
+
+#### Exercises:
+- **ex00 - Polymorphism**: Basic virtual functions and polymorphic behavior
+- **ex01 - I Don't Want to Set the World on Fire**: Deep copy implementation with Brain class
+- **ex02 - Abstract Class**: Pure virtual functions and abstract base classes
 
 ---
 
@@ -98,6 +125,7 @@ make
 ### Object-Oriented Programming
 - Encapsulation through private/protected members
 - Inheritance hierarchies and polymorphism
+- Virtual and pure virtual functions and abstract classes
 - Proper class design following C++ best practices
 
 ### C++ Language Features
@@ -105,11 +133,14 @@ make
 - References vs pointers usage patterns
 - Static members for class-wide data
 - Orthodox Canonical Class Form for robust classes
+- Virtual destructors and polymorphic cleanup
 
 ### Best Practices
 - Const correctness
 - Proper header file organization
 - Memory leak prevention
+- Deep copy implementation for resource management
+- Virtual destructor usage in inheritance hierarchies
 - Code organization and modularity
 
 ## 🔍 Code Quality Standards
