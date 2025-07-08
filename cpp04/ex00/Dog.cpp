@@ -1,9 +1,8 @@
 #include "Dog.hpp"
 
-Dog::Dog(void)
+Dog::Dog(void) : Animal("Dog")
 {
 	std::cout << "Dog constructor called" << std::endl;
-	type = "Dog";
 }
 
 Dog::Dog(const Dog &copyfrom) : Animal(copyfrom)
@@ -15,7 +14,7 @@ Dog& Dog::operator=(const Dog &right)
 {
 	std::cout << "Dog operator assignment called" << std::endl;
 	if (this != &right)
-		type = right.type;
+		Animal::operator=(right);
 	return (*this);
 }
 

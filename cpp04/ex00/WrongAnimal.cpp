@@ -5,6 +5,11 @@ WrongAnimal::WrongAnimal(void) : type("WrongAnimal")
 	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
+WrongAnimal::WrongAnimal(std::string type) : type(type)
+{
+	std::cout << "WrongAnimal parametered constructor called" << std::endl;
+}
+
 WrongAnimal::WrongAnimal(const WrongAnimal &copyfrom) : type(copyfrom.type)
 {
 	std::cout << "WrongAnimal copy constructor called" << std::endl;
@@ -14,7 +19,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal &right)
 {
 	std::cout << "WrongAnimal operator assignment called" << std::endl;
 	if (this != &right)
-		type = right.type;
+		WrongAnimal::operator=(right);
 	return (*this);
 }
 

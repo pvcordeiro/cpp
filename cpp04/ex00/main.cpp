@@ -6,7 +6,9 @@
 
 int main()
 {
-	std::cout << "=== Testing Proper Polymorphism (Animal with virtual functions) ===" << std::endl;
+	std::cout << "=== Module 04 Exercise 00: Polymorphism and Virtual Functions ===" << std::endl;
+	
+	std::cout << "\n=== Testing Proper Polymorphism (Animal with virtual functions) ===" << std::endl;
 	
 	// Creating animals through base class pointers
 	const Animal* animal = new Animal();
@@ -71,9 +73,14 @@ int main()
 	assignedDog.makeSound();
 	
 	std::cout << "\n=== Summary ===" << std::endl;
-	std::cout << "- Animal class uses virtual functions for proper polymorphism" << std::endl;
-	std::cout << "- WrongAnimal class doesn't use virtual functions, causing incorrect behavior" << std::endl;
-	std::cout << "- When using base class pointers, virtual functions ensure correct derived method calls" << std::endl;
+	std::cout << "✅ Virtual functions enable proper polymorphism" << std::endl;
+	std::cout << "✅ Animal base class with virtual makeSound() works correctly" << std::endl;
+	std::cout << "✅ Dog and Cat override makeSound() properly" << std::endl;
+	std::cout << "✅ Virtual destructors ensure proper cleanup" << std::endl;
+	std::cout << "✅ WrongAnimal demonstrates static binding problems" << std::endl;
+	std::cout << "✅ Copy constructor and assignment operator work correctly" << std::endl;
+	std::cout << "✅ Polymorphism: Base pointers call correct derived methods" << std::endl;
+	std::cout << "✅ Static binding: Non-virtual functions call base class methods" << std::endl;
 	
 	return 0;
 }

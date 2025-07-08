@@ -9,6 +9,7 @@ class WrongAnimal
 		std::string type;
 	public:
 		WrongAnimal(void);
+		WrongAnimal(std::string type);
 		WrongAnimal(const WrongAnimal &copyFrom);
 		WrongAnimal& operator=(const WrongAnimal &right);
 		~WrongAnimal(void);

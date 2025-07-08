@@ -9,6 +9,7 @@ class Animal
 		std::string type;
 	public:
 		Animal(void);
+		Animal(std::string type);
 		Animal(const Animal &copyFrom);
 		Animal& operator=(const Animal &right);
 		virtual ~Animal(void);

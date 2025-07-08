@@ -15,7 +15,7 @@ WrongCat& WrongCat::operator=(const WrongCat &right)
 {
 	std::cout << "WrongCat operator assignment called" << std::endl;
 	if (this != &right)
-		type = right.type;
+		WrongAnimal::operator=(right);
 	return (*this);
 }
 

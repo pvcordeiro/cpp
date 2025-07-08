@@ -5,6 +5,11 @@ Animal::Animal(void) : type("Animal")
 	std::cout << "Animal constructor called" << std::endl;
 }
 
+Animal::Animal(std::string type) : type(type)
+{
+	std::cout << "Animal parametered constructor called" << std::endl;
+}
+
 Animal::Animal(const Animal &copyfrom) : type(copyfrom.type)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
