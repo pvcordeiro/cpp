@@ -1,5 +1,5 @@
-#ifndef WRONGANIMAL_CPP
-# define WRONGANIMAL_CPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 
