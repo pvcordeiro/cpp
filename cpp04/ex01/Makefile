@@ -1,5 +1,5 @@
-NAME	= brain
-SRC		= main.cpp
+NAME	= animal
+SRC		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
