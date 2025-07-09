@@ -11,8 +11,8 @@ int main()
 		std::cout << "\n--- Test 1: Valid creation ---" << std::endl;
 		Bureaucrat john("John", 50);
 		Bureaucrat alice("Alice", 5);
-		Form taxForm("Tax Form", 25, 10);
-		Form secretForm("Secret Form", 1, 1);
+		Form taxForm("Tax Form", 75, 60);  // John can sign (50 < 75)
+		Form secretForm("Secret Form", 10, 5);  // Alice can sign (5 < 10)
 
 		std::cout << john << std::endl;
 		std::cout << alice << std::endl;
@@ -26,7 +26,9 @@ int main()
 
 		// Test 3: Failed signing (grade too low)
 		std::cout << "\n--- Test 3: Failed signing (grade too low) ---" << std::endl;
-		john.signForm(secretForm);
+		Form vipForm("VIP Form", 1, 1);  // Requires grade 1, both should fail
+		john.signForm(vipForm);
+		alice.signForm(vipForm);
 
 		// Test 4: Already signed form
 		std::cout << "\n--- Test 4: Already signed form ---" << std::endl;
