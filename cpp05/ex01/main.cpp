@@ -58,10 +58,7 @@ int main()
 	try {
 		std::cout << "\n--- Test 8: Form getters ---" << std::endl;
 		Form testForm("Test Form", 100, 75);
-		std::cout << "Form name: " << testForm.getName() << std::endl;
-		std::cout << "Is signed: " << testForm.getIsSigned() << std::endl;
-		std::cout << "Grade to sign: " << testForm.getGradeToSign() << std::endl;
-		std::cout << "Grade to execute: " << testForm.getGradeToExecute() << std::endl;
+		std::cout << testForm << std::endl;
 	} catch (const std::exception& e) {
 		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
