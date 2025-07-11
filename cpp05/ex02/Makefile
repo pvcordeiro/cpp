@@ -1,5 +1,5 @@
-NAME	= abstract
-SRC		= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp WrongCat.cpp WrongAnimal.cpp
+NAME	= formv2
+SRC		= main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++

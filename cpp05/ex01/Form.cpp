@@ -66,6 +66,7 @@ void	Form::beSigned(Bureaucrat &bureaucrat)
 	if (isSigned)
 		throw (AlreadySigned());
 	isSigned = true;
+	std::cout << bureaucrat.getName() << " signed " << name << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& out, const Form &form)
@@ -73,5 +74,5 @@ std::ostream& operator<<(std::ostream& out, const Form &form)
 	return (out << "Form name: " << form.getName() 
 	<< "\nIs signed: " << (form.getIsSigned() ? "Yes" : "No")
 	<< "\nGrade to sign: " << form.getGradeToSign()
-	<< "\nGrade to execute: " << form.getGradeToExecute() << std::endl);
+	<< "\nGrade to execute: " << form.getGradeToExecute());
 }
