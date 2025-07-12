@@ -3,17 +3,17 @@
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-	return ("grade too low!");
+	return ("it's grade is too low!");
 }
 
 const char *Form::GradeTooHighException::what() const throw()
 {
-	return ("grade too high!");
+	return ("it's grade is too high!");
 }
 
 const char *Form::AlreadySigned::what () const throw()
 {
-	return ("this form is already signed.");
+	return ("it's already signed.");
 }
 
 Form::Form(void) : name(""), isSigned(false), gradeToSign(0), gradeToExecute(0) {}

@@ -2,12 +2,12 @@
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Grade is too low!");
+	return ("it's grade is too low!");
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Grade is too high!");
+	return ("it's grade is too high!");
 }
 
 Bureaucrat::Bureaucrat(void) : name("No name"), grade(150) {}
