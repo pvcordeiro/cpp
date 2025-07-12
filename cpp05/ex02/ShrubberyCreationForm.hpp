@@ -10,6 +10,7 @@ class	ShrubberyCreationForm : public AForm
 	private:
 		std::string target;
 	public:
+		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(const std::string &target);
 		ShrubberyCreationForm(const ShrubberyCreationForm &copyFrom);
 		ShrubberyCreationForm& operator=(const ShrubberyCreationForm &right);

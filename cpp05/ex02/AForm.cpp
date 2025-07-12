@@ -70,9 +70,7 @@ void	AForm::beSigned(Bureaucrat &bureaucrat)
 		throw (GradeTooLowException());
 	if (isSigned)
 		throw (AlreadySigned());
-	isSigned = true;
-	std::cout << bureaucrat.getName() << " signed " << name << std::endl;
-}
+	isSigned = true;}
 
 void	AForm::execute(Bureaucrat const &executor) const
 {

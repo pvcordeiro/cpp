@@ -1,95 +1,100 @@
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 int main()
 {
-    std::cout << "=== Presidential Pardon Form Test ===" << std::endl;
+    std::cout << "=== Testing Form Creation ===" << std::endl;
+    
+    ShrubberyCreationForm shrub("garden");
+    RobotomyRequestForm robot("Bender");
+    PresidentialPardonForm pardon("Arthur Dent");
+    
+    std::cout << shrub << std::endl;
+    std::cout << robot << std::endl;
+    std::cout << pardon << std::endl;
+    
+    std::cout << "\n=== Testing Bureaucrats ===" << std::endl;
     
     try {
-        PresidentialPardonForm pardonForm("Alice");
-        std::cout << "Created: " << pardonForm << std::endl;
+        Bureaucrat lowGrade("Intern", 150);
+        Bureaucrat midGrade("Manager", 50);
+        Bureaucrat highGrade("CEO", 1);
         
-        Bureaucrat highRankBureaucrat("Boss", 1);
-        Bureaucrat midRankBureaucrat("Manager", 40);
-        Bureaucrat lowRankBureaucrat("Intern", 150);
+        std::cout << lowGrade << std::endl;
+        std::cout << midGrade << std::endl;
+        std::cout << highGrade << std::endl;
         
-        std::cout << "\nBureaucrats created:" << std::endl;
-        std::cout << highRankBureaucrat << std::endl;
-        std::cout << midRankBureaucrat << std::endl;
-        std::cout << lowRankBureaucrat << std::endl;
+        std::cout << "\n=== Testing Form Signing ===" << std::endl;
         
-        std::cout << "\n--- Testing Presidential Pardon Form Signing ---" << std::endl;
+        std::cout << "\n--- Low grade bureaucrat trying to sign forms ---" << std::endl;
+        lowGrade.signForm(shrub);
+        lowGrade.signForm(robot);
+        lowGrade.signForm(pardon);
         
-        std::cout << "Trying to sign with low rank bureaucrat:" << std::endl;
-        lowRankBureaucrat.signForm(pardonForm);
+        std::cout << "\n--- Mid grade bureaucrat trying to sign forms ---" << std::endl;
+        midGrade.signForm(shrub);
+        midGrade.signForm(robot);
+        midGrade.signForm(pardon);
         
-        std::cout << "\nTrying to sign with mid rank bureaucrat:" << std::endl;
-        midRankBureaucrat.signForm(pardonForm);
+        std::cout << "\n=== Testing Form Execution ===" << std::endl;
         
-        std::cout << "\nSigning with high rank bureaucrat:" << std::endl;
-        highRankBureaucrat.signForm(pardonForm);
+        std::cout << "\n--- Low grade bureaucrat trying to execute forms ---" << std::endl;
+        lowGrade.executeForm(shrub);
+        lowGrade.executeForm(robot);
+        lowGrade.executeForm(pardon);
         
-        std::cout << "\n--- Testing Presidential Pardon Form Execution ---" << std::endl;
+        std::cout << "\n--- Mid grade bureaucrat trying to execute forms ---" << std::endl;
+        midGrade.executeForm(shrub);
+        midGrade.executeForm(robot);
+        midGrade.executeForm(pardon);
         
-        std::cout << "Trying to execute with mid rank bureaucrat:" << std::endl;
-        midRankBureaucrat.executeForm(pardonForm);
+        std::cout << "\n--- High grade bureaucrat trying to execute forms ---" << std::endl;
+        highGrade.executeForm(shrub); 
+        highGrade.executeForm(robot); 
+        highGrade.executeForm(pardon);
         
-        std::cout << "\nTrying to execute with high rank bureaucrat:" << std::endl;
-        highRankBureaucrat.executeForm(pardonForm);
+        std::cout << "\n=== Testing Unsigned Form Execution ===" << std::endl;
         
-    } catch (std::exception &e) {
-        std::cout << "Exception caught: " << e.what() << std::endl;
-    }
-    
-    std::cout << "\n=== Robotomy Request Form Test ===" << std::endl;
-    
-    try {
-        RobotomyRequestForm robotomyForm("Bob");
-        std::cout << "Created: " << robotomyForm << std::endl;
+        ShrubberyCreationForm unsignedShrub("unsigned");
+        std::cout << "\n--- Trying to execute unsigned form ---" << std::endl;
+        highGrade.executeForm(unsignedShrub);
         
-        Bureaucrat robotomyBureaucrat("Surgeon", 50);
-        Bureaucrat robotomySignBureaucrat("Doctor", 70);
+        std::cout << "\n=== Testing Exception Handling ===" << std::endl;
         
-        std::cout << "\nBureaucrats for robotomy:" << std::endl;
-        std::cout << robotomyBureaucrat << std::endl;
-        std::cout << robotomySignBureaucrat << std::endl;
-        
-        std::cout << "\n--- Testing Robotomy Form Signing ---" << std::endl;
-        
-        std::cout << "Trying to sign with Doctor (grade 70):" << std::endl;
-        robotomySignBureaucrat.signForm(robotomyForm);
-        
-        std::cout << "\n--- Testing Robotomy Form Execution ---" << std::endl;
-        
-        std::cout << "Trying to execute with Surgeon (grade 50):" << std::endl;
-        robotomyBureaucrat.executeForm(robotomyForm);
-        
-        std::cout << "\nTrying to execute with Boss (grade 1):" << std::endl;
-        Bureaucrat highRankBureaucrat2("Boss", 1);
-        highRankBureaucrat2.executeForm(robotomyForm);
-        
-        std::cout << "\n--- Testing Multiple Robotomy Attempts ---" << std::endl;
-        std::cout << "Attempting robotomy multiple times to see random results:" << std::endl;
-        
-        for (int i = 0; i < 5; i++) {
-            std::cout << "Attempt " << (i + 1) << ": ";
-            highRankBureaucrat2.executeForm(robotomyForm);
+        try {
+            Bureaucrat invalidLow("Invalid Low", 151);
+        }
+        catch (const std::exception& e) {
+            std::cout << "Exception caught: " << e.what() << std::endl;
         }
         
-        std::cout << "\n--- Testing with unsigned robotomy form ---" << std::endl;
+        try {
+            Bureaucrat invalidHigh("Invalid High", 0);
+        }
+        catch (const std::exception& e) {
+            std::cout << "Exception caught: " << e.what() << std::endl;
+        }
         
-        RobotomyRequestForm unsignedRobotomy("Charlie");
-        std::cout << "Trying to execute unsigned robotomy form:" << std::endl;
-        highRankBureaucrat2.executeForm(unsignedRobotomy);
+        std::cout << "\n=== Testing Copy and Assignment ===" << std::endl;
         
-    } catch (std::exception &e) {
-        std::cout << "Exception caught: " << e.what() << std::endl;
+        ShrubberyCreationForm shrubCopy(shrub);
+        std::cout << "Original: " << shrub << std::endl;
+        std::cout << "Copy: " << shrubCopy << std::endl;
+        
+        RobotomyRequestForm robotAssign;
+        robotAssign = robot;
+        std::cout << "Original robot: " << robot << std::endl;
+        std::cout << "Assigned robot: " << robotAssign << std::endl;
+        
+    }
+    catch (const std::exception& e) {
+        std::cout << "Unexpected exception: " << e.what() << std::endl;
     }
     
-    std::cout << "\n=== Test Complete ===" << std::endl;
+    std::cout << "\n=== End of Tests ===" << std::endl;
     return 0;
 }

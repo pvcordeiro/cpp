@@ -9,12 +9,12 @@ int main()
 		Bureaucrat john("John", 50);
 		std::cout << john;
 		
-		std::cout << "\n2. Incrementing grade by 10:" << std::endl;
-		john.incrementGrade(10);
+		std::cout << "\n2. Incrementing grade by 1:" << std::endl;
+		john.incrementGrade();
 		std::cout << john;
 		
-		std::cout << "\n3. Decrementing grade by 20:" << std::endl;
-		john.decrementGrade(20);
+		std::cout << "\n3. Decrementing grade by 1:" << std::endl;
+		john.decrementGrade();
 		std::cout << john;
 		
 		std::cout << "\n4. Testing copy constructor:" << std::endl;
@@ -48,18 +48,18 @@ int main()
 	
 	try {
 		std::cout << "\n8. Testing increment beyond limit:" << std::endl;
-		Bureaucrat topGuy("TopGuy", 2);
+		Bureaucrat topGuy("TopGuy", 1);
 		std::cout << "Before increment: " << topGuy;
-		topGuy.incrementGrade(5);
+		topGuy.incrementGrade();
 	} catch (const std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
 	
 	try {
 		std::cout << "\n9. Testing decrement beyond limit:" << std::endl;
-		Bureaucrat lowGuy("LowGuy", 149);
+		Bureaucrat lowGuy("LowGuy", 150);
 		std::cout << "Before decrement: " << lowGuy;
-		lowGuy.decrementGrade(5);
+		lowGuy.decrementGrade();
 	} catch (const std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}

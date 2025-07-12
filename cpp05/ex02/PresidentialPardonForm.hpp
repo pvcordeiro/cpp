@@ -12,6 +12,7 @@ class	PresidentialPardonForm : public AForm
 	private:
 		std::string target;
 	public:
+		PresidentialPardonForm(void);
 		PresidentialPardonForm(const std::string &target);
 		PresidentialPardonForm(const PresidentialPardonForm &copyFrom);
 		PresidentialPardonForm& operator=(const PresidentialPardonForm &right);

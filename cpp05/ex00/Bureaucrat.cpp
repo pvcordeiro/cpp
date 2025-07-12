@@ -47,14 +47,14 @@ std::string	Bureaucrat::getName(void) const
 	return (name);
 }
 
-void	Bureaucrat::incrementGrade(int amount)
+void	Bureaucrat::incrementGrade(void)
 {
-	setGrade(grade - amount);
+	setGrade(grade - 1);
 }
 
-void	Bureaucrat::decrementGrade(int amount)
+void	Bureaucrat::decrementGrade(void)
 {
-	setGrade(grade + amount);
+	setGrade(grade + 1);
 }
 
 

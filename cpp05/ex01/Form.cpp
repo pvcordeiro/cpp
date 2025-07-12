@@ -66,7 +66,6 @@ void	Form::beSigned(Bureaucrat &bureaucrat)
 	if (isSigned)
 		throw (AlreadySigned());
 	isSigned = true;
-	std::cout << bureaucrat.getName() << " signed " << name << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& out, const Form &form)
