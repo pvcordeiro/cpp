@@ -1,5 +1,5 @@
-NAME	= bureaucrat
-SRC		= main.cpp Bureaucrat.cpp
+NAME	= identify
+SRC		= main.cpp Base.cpp functions.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
