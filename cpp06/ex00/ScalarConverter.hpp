@@ -6,6 +6,7 @@
 #include <string>
 #include <cmath>
 #include <climits>
+#include <sstream>
 
 class ScalarConverter
 {

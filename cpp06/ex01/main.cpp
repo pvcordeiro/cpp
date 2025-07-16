@@ -11,7 +11,7 @@ int main(void)
     std::cout << "  Address: " << originalData << std::endl;
     std::cout << "  Value: " << originalData->value << std::endl;
     
-    uintptr_t serialized = Serializer::serialize(originalData);
+    unsigned long serialized = Serializer::serialize(originalData);
     std::cout << "\nSerialized address: " << serialized << std::endl;
     std::cout << "Serialized address (hex): 0x" << std::hex << serialized << std::dec << std::endl;
     Data* deserializedData = Serializer::deserialize(serialized);

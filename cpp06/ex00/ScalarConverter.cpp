@@ -40,7 +40,11 @@ static std::string convertToInt(double value)
 	if (std::isnan(value) || std::isinf(value) || value < INT_MIN || value > INT_MAX)
 		return ("impossible");
 	else
-		return (std::to_string(static_cast<int>(value)));
+	{
+		std::ostringstream oss;
+		oss << static_cast<int>(value);
+		return (oss.str());
+	}
 }
 
 static bool printAll(double value, bool isInteger = false)
@@ -72,31 +76,21 @@ static bool isInt(const std::string &input)
 {
 	if (input.find('.') != std::string::npos || input.find('f') != std::string::npos)
 		return (false);
-	int value;
-	try {
-		if (std::stoll(input) < INT_MIN || std::stoll(input) > INT_MAX)
-			return (false);
-		value = static_cast<int>(std::stoll(input));
-	}
-	catch(...) {
+	long check = atol(input.c_str());
+	if (check < INT_MIN || check > INT_MAX)
 		return (false);
-	}
+	int value = static_cast<int>(check);
 	return (printAll(static_cast<double>(value), true));
 }
 
 static bool	isFloatOrDouble(const std::string &input)
 {
-	bool	isFloat = (input.back() == 'f' && input.find('.') != std::string::npos);
-	bool	isDouble = (input.find('.') != std::string::npos && input.back() != 'f');
+	bool	isFloat = (input[input.length() - 1] == 'f' && input.find('.') != std::string::npos);
+	bool	isDouble = (input.find('.') != std::string::npos && input[input.length() - 1] != 'f');
 	if (!isFloat && !isDouble)
 		return (false);
 	std::string checkedString = isFloat ? input.substr(0, input.length() - 1) : input;
-	double value;
-	try {
-		value = std::stod(checkedString);
-	} catch (...){
-		return (false);
-	}
+	double value = atof(checkedString.c_str());
 	return (printAll(value, (value == static_cast<int>(value))));
 }
 

@@ -11,8 +11,8 @@ class Serializer
 		Serializer &operator=(const Serializer &right);
 		~Serializer(void);
 	public:
-		static uintptr_t	serialize(Data*ptr);
-		static Data*		deserialize(uintptr_t raw);
+		static unsigned long	serialize(Data*ptr);
+		static Data*		deserialize(unsigned long raw);
 };
 
 #endif
