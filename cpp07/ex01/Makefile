@@ -1,5 +1,5 @@
-NAME	= convert
-SRC		= main.cpp ScalarConverter.cpp
+NAME	= iter
+SRC		= main.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
