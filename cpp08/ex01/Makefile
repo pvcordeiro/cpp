@@ -1,5 +1,5 @@
-NAME	= template
-SRC		= main.cpp
+NAME	= span
+SRC		= main.cpp Span.cpp
 OBJ_DIR	= obj
 OBJ		= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 CC		= c++
