@@ -13,7 +13,7 @@ class MutantStack : public std::stack<T, Container>
 	public:
 		typedef typename Container::iterator iterator;
 		typedef typename Container::const_iterator const_iterator;
-		MutantStack(void) : std::stack<T, Container>(void) {}
+		MutantStack(void) : std::stack<T, Container>() {}
 		MutantStack(const MutantStack& copyFrom) : std::stack<T, Container>(copyFrom) {}
 		MutantStack& operator=(const MutantStack& right)
 		{
