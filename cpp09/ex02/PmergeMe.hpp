@@ -6,13 +6,10 @@
 #include <string>
 #include <stdexcept>
 #include <iostream>
-#include <vector>
-#include <deque>
 #include <sstream>
 #include <algorithm>
 #include <iomanip>
 #include <sys/time.h>
-#include <sstream>
 
 class PmergeMe
 {
