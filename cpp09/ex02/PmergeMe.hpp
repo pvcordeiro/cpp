@@ -11,11 +11,13 @@
 #include <sstream>
 #include <algorithm>
 
+
 class PmergeMe
 {
 	public:
 		static void fordJohnsonSortVector(std::vector<int>& input);
 		static void fordJohnsonSortDeque(std::deque<int>& input);
+		virtual	void abstract(void) = 0;
 };
 
 #endif 
