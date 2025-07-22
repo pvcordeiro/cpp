@@ -10,14 +10,15 @@
 #include <deque>
 #include <sstream>
 #include <algorithm>
-
+#include <iomanip>
+#include <sys/time.h>
+#include <sstream>
 
 class PmergeMe
 {
-	public:
-		static void fordJohnsonSortVector(std::vector<int>& input);
-		static void fordJohnsonSortDeque(std::deque<int>& input);
-		virtual	void abstract(void) = 0;
+public:
+	static void run(int argc, char** argv);
+	virtual	void abstract(void) = 0;
 };
 
 #endif 
