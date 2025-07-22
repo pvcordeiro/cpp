@@ -55,6 +55,6 @@ void RPN::doTheThing(const std::string& input)
             stack.push(parseNumber(token));
     }
     if (stack.size() != 1)
-        throw (std::runtime_error("Error: need more tokens to finish RPN"));
+		throw (std::runtime_error("Error: need more tokens to finish RPN"));
 	return (std::cout << stack.top() << std::endl, (void)0);
 }
