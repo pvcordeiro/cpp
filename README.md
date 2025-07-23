@@ -2,6 +2,7 @@
 
 This repository contains my journey through C++ programming, exploring fundamental concepts through practical exercises. Each module focuses on specific C++ features and programming paradigms.
 
+
 ## � Table of Contents
 
 - [CPP00 - Namespaces, Classes, Member Functions](#cpp00---namespaces-classes-member-functions-stdio-streams-initialization-lists-static-const)
@@ -9,6 +10,11 @@ This repository contains my journey through C++ programming, exploring fundament
 - [CPP02 - Operator Overloading, Canonical Form](#cpp02---ad-hoc-polymorphism-operator-overloading-orthodox-canonical-class-form)
 - [CPP03 - Inheritance](#cpp03---inheritance)
 - [CPP04 - Polymorphism, Abstract Classes](#cpp04---subtype-polymorphism-abstract-classes-interfaces)
+- [CPP05 - Exceptions, Operator Overloading, File Streams](#cpp05---exceptions-operator-overloading-file-streams)
+- [CPP06 - Casts, Serialization, Static Members](#cpp06---casts-serialization-static-members)
+- [CPP07 - Templates, Iterators, Algorithms](#cpp07---templates-iterators-algorithms)
+- [CPP08 - STL, Containers, Algorithms](#cpp08---stl-containers-algorithms)
+- [CPP09 - Polymorphic Containers, Inheritance](#cpp09---polymorphic-containers-inheritance)
 - [Building and Running](#️-building-and-running)
 - [Key Learning Outcomes](#-key-learning-outcomes)
 - [Code Quality Standards](#-code-quality-standards)
@@ -84,6 +90,7 @@ This repository contains my journey through C++ programming, exploring fundament
 
 ---
 
+
 ### CPP04 - Subtype Polymorphism, Abstract Classes, Interfaces
 
 **Key Concepts Learned:**
@@ -97,6 +104,87 @@ This repository contains my journey through C++ programming, exploring fundament
 - **ex00 - Polymorphism**: Basic virtual functions and polymorphic behavior
 - **ex01 - I Don't Want to Set the World on Fire**: Deep copy implementation with Brain class
 - **ex02 - Abstract Class**: Pure virtual functions and abstract base classes
+
+---
+
+### CPP05 - Exceptions, Operator Overloading, File Streams
+
+**Key Concepts Learned:**
+- Exception handling and custom exceptions
+- Operator overloading (increment, decrement, stream operators)
+- File I/O and stream manipulation
+- Inheritance and polymorphism with exceptions
+- Form and bureaucrat class interactions
+
+#### Exercises:
+- **ex00 - Bureaucrat**: Exception handling and operator overloading
+- **ex01 - Form**: Inheritance, exceptions, and validation
+- **ex02 - Shrubbery Creation**: File I/O, polymorphism, and exceptions
+- **ex03 - Intern**: Dynamic object creation and exception safety
+
+---
+
+### CPP06 - Casts, Serialization, Static Members
+
+**Key Concepts Learned:**
+- C++ type casting (static_cast, dynamic_cast, etc.)
+- Serialization and deserialization
+- Static members and functions
+- RTTI (Run-Time Type Information)
+- Pseudo-random number generation
+
+#### Exercises:
+- **ex00 - Casts**: Type casting and RTTI
+- **ex01 - Serialization**: Object serialization and pointer manipulation
+- **ex02 - Base Class Identification**: Dynamic casting and polymorphism
+
+---
+
+### CPP07 - Templates, Iterators, Algorithms
+
+**Key Concepts Learned:**
+- Function and class templates
+- Iterator patterns and STL algorithms
+- Template specialization
+- Generic programming
+- Container manipulation
+
+#### Exercises:
+- **ex00 - Template**: Function templates and specialization
+- **ex01 - Iter**: Iterator usage and template functions
+- **ex02 - Array**: Template classes and array manipulation
+
+---
+
+### CPP08 - STL, Containers, Algorithms
+
+**Key Concepts Learned:**
+- Standard Template Library (STL) containers (vector, list, etc.)
+- Algorithms (sort, find, etc.)
+- Functors and predicates
+- Exception safety with containers
+- Custom container implementation
+
+#### Exercises:
+- **ex00 - Easy Find**: STL algorithms and exception handling
+- **ex01 - Span**: Custom container and range algorithms
+- **ex02 - MutantStack**: Stack extension and iterator support
+
+---
+
+### CPP09 - Polymorphic Containers, Inheritance
+
+**Key Concepts Learned:**
+- Polymorphic containers
+- Multiple inheritance and interfaces
+- Abstract base classes and virtual functions
+- Dynamic memory management in containers
+- Advanced object-oriented design
+
+#### Exercises:
+- **ex00 - RPN**: Reverse Polish Notation calculator with stack
+- **ex01 - Bitcoin Exchange**: File parsing and data structures
+- **ex02 - PmergeMe**: Polymorphic containers and sorting algorithms
 
 ---
 
